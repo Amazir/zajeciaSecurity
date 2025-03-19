@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Strona główna</title>
+</head>
+<body>
+  <h1>Witaj na stronie glownej</h1>
+  <p><a href="/secured">Kliknij aby przejsc do sekcji dla zalogowanych</a></p>
+  <form method="post" action="/logout">
+    <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
+    <button type="submit">Wyloguj</button>
+  </form>
+</body>
+</html>
